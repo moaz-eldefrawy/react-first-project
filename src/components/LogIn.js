@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Card, Form, Button, Alert, Container } from 'react-bootstrap';
 import { useAuth } from './AuthProvider';
 import { Link, Redirect } from 'react-router-dom';
+import CustomNavbar from '../reusable-components/CustomNavbar'
 
 export default function LogIn() {
     const emailRef = useRef();
@@ -27,7 +28,8 @@ export default function LogIn() {
 
 
     return (
-
+            <>
+            <CustomNavbar />
             <div>
                 <Card>
                     <Card.Body>
@@ -58,5 +60,6 @@ export default function LogIn() {
                 <Link to="/post"> Post</Link>
                 </div>
             </div>
+            </>
     )
 }

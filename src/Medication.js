@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Med from './Med'
+import CustomNavbar from './reusable-components/CustomNavbar'
 
 const Medications_ = [
     {
@@ -14,6 +15,8 @@ const Medications_ = [
 function Medication() {
     const [Medications, setstateMedications] = useState(Medications_)
     return (
+        <>
+        <CustomNavbar />
         <div className="container">
         {
             Medications.map( (medication) => {
@@ -21,6 +24,7 @@ function Medication() {
             } )    
         }  
         </div>
+        </>
     )
 }
 
