@@ -1,5 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Summary from './components/Summary';
+import SignUp from './components/SignUp';
+import LogIn from './components/LogIn';
+import { Container } from "react-bootstrap";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import AuthProvider from './components/AuthProvider';
+import PrivateRoute from './components/PrivateRoute';
+import HomePage from './components/HomePage';
 import firebase from 'firebase'
 import Medication from "./Medication"
 
@@ -39,10 +46,23 @@ db.collection("users").get().then((querySnapshot) => {
 
  
 function App() {
+  
   return (
-    <div className="App">
-        <Medication />
-    </div>
+  
+    <AuthProvider>
+
+        <div>
+          <Router>
+            <Switch>
+              <Route exact path="/signup" component={SignUp} />
+              <Route exact path="/login" component={LogIn} />
+              <Route path="/home" component={HomePage} />
+              <Route path="/summary" component={Summary} />
+              <Route component={LogIn} />
+            </Switch>
+          </Router>
+        </div>
+    </AuthProvider>
   );
 }
 

@@ -1,0 +1,26 @@
+.container {
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.item{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+p{
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    align-self: center;
+}
+
+.Button{
+    margin: auto;
+}
