@@ -31,7 +31,7 @@ const Summary = () => {
           <Card.Body>
             <Card.Text>Cholestrol levels okay</Card.Text>
 
-            <div className='container'>
+            <div className='container center'>
                 <Button variant="info" className='Button'>Details</Button>
             </div>
 
@@ -44,7 +44,7 @@ const Summary = () => {
           <Card.Body>
             <Card.Text>Blood Pressure is above average</Card.Text>
 
-            <div className='container'>
+            <div className='container center'>
                 <Button variant="info" className='Button'>Details</Button>
             </div>
 

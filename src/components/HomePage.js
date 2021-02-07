@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Button, Container, Row, Jumbotron } from 'react-bootstrap';
 import CustomNavbar from '../reusable-components/CustomNavbar';
+import './HomePage.css'
 
 export default function HomePage() {
 
@@ -16,13 +17,13 @@ export default function HomePage() {
     )
 
     return (
-        <div>
+        
+        <div >
             <CustomNavbar />
             <Jumbotron>
-                <h1>Hello, world!</h1>
+                <h1>CareTaker</h1>
                 <p>
-                    This is a simple hero unit, a simple jumbotron-style component for calling
-                    extra attention to featured content or information.
+                    Using IoMT technology to protect our loved ones. 
                 </p>
                 <p>
                     <Button variant="primary">Learn more</Button>
