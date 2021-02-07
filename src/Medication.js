@@ -12,6 +12,16 @@ const Medications_ = [
         name: "Panadol",
         day: 0,
         time: "10:30 PM"
+    },
+    {
+        name: "Profin",
+        day: 2,
+        time: "2:30 PM"
+    },
+    {
+        name: "Migranil",
+        day: 0,
+        time: "4:30 PM"
     }
 ]
 
@@ -33,7 +43,7 @@ function Medication() {
     }
 
     return (
-        <>
+        <div>
         <CustomNavbar />
         <div className="" style={{width:"80%", margin:"50px auto"}} >
         <div>
@@ -106,7 +116,7 @@ function Medication() {
         }
 
         </div>
-        </>
+        </div>
     )
 }
 

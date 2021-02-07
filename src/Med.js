@@ -10,7 +10,7 @@ function Med({medication}) {
 
     
     return (
-        <div className="border shadow">
+        <div className="border shadow" style={{background:"white", margin: "20px"}}>
             
             <h1> {medication.name} </h1>
             <h3> day: {dayName[medication.day]} </h3>
