@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Card, Form, Button, Alert, Container } from 'react-bootstrap';
 import { useAuth } from './AuthProvider';
 import { Link, Redirect } from 'react-router-dom';
+import './Sign.css'
 
 export default function LogIn() {
     const emailRef = useRef();
@@ -28,8 +29,8 @@ export default function LogIn() {
 
     return (
 
-            <div>
-                <Card>
+            <div className='flex-container'>
+                <Card className='form-card'>
                     <Card.Body>
                         <h2 className="text-center mb-4">Login</h2>
                         {error && <Alert variant='danger'>{error}</Alert>}
