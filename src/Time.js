@@ -2,7 +2,7 @@ import React from 'react'
 
 function Time(time) {
     return (
-        <div>
+        <div style={{margin:"20px"}}>
             <input type="time" value={time}/>
         </div>
     )
