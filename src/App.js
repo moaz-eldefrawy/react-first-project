@@ -60,6 +60,7 @@ function App() {
               <Route exact path="/notif" component={Notifications} />
               <Route path="/home" component={HomePage} />
               <Route path="/summary" component={Summary} />
+              <Route path="/medication" component={Medication} />
               <Route component={LogIn} />
             </Switch>
           </Router>
