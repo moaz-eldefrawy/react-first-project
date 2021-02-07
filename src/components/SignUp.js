@@ -3,6 +3,7 @@ import { Card, Form, Button, Alert } from 'react-bootstrap';
 import { useAuth } from './AuthProvider';
 import { Link } from 'react-router-dom';
 import './Sign.css'
+import CustomNavbar from '../reusable-components/CustomNavbar';
 
 export default function SignUp() {
     const emailRef = useRef();
@@ -31,7 +32,9 @@ export default function SignUp() {
     }
 
     return (
-        <div className='flex-container'>
+        <>
+        <CustomNavbar/>
+       <div className='flex-container'>
             <Card className='form-card'>
                 <Card.Body>
                     <h2 className="text-center mb-4">SignUp</h2>
@@ -70,6 +73,6 @@ export default function SignUp() {
                 <Link to="/login"> Login</Link>
             </div>
         </div>
-
+        </>
     )
 }

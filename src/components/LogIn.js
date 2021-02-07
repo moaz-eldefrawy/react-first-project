@@ -29,8 +29,9 @@ export default function LogIn() {
 
   return (
     <>
+    <CustomNavbar />
       <div className="flex-container">
-        <CustomNavbar />
+        
         <Card className="form-card">
           <Card.Body>
             <h2 className="text-center mb-4">Login</h2>
