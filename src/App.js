@@ -7,6 +7,7 @@ import AuthProvider from './components/AuthProvider';
 import PrivateRoute from './components/PrivateRoute';
 import HomePage from './components/HomePage';
 import firebase from 'firebase'
+import Medication from "./Medication"
 
 var firebaseConfig = {
   apiKey: "AIzaSyDs1BuBmCULnjtlsWrA0uKf-0AtX1ihVY8",
