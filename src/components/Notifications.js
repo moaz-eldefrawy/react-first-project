@@ -8,7 +8,7 @@ export default function Notifications() {
     useEffect(() => {
         setInterval(() => {
             // Do API CALL
-            setNotifs(prevNotifs => [newNotifs, ...prevNotifs])
+            setNotifs(prevNotifs => [i, ...prevNotifs])
         }, 1000);
     }, [])
 
