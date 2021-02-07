@@ -9,7 +9,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 20px auto;
 }
 
 p{
@@ -22,5 +22,5 @@ p{
 }
 
 .Button{
-    margin: auto;
+    margin: 0 10px;
 }
