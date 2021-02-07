@@ -13,11 +13,7 @@ const Medications_ = [
         day: 0,
         time: "10:30 PM"
     },
-    {
-        name: "Profin",
-        day: 2,
-        time: "2:30 PM"
-    },
+  
     {
         name: "Migranil",
         day: 0,
@@ -37,7 +33,20 @@ function Medication() {
     const [days, setDays] = useState([]);
     const [time, setTime] = useState([]);
 
+
+    const addMed = (e) => {
+        var medication = {
+            name: name,
+            days: days,
+            time: time
+        }
+        console.log(medication)
+        setstateMedications([ ...Medications, medication ])
+        return 0;
+    }
+
     const addTime = (e) => {
+        e.preventDefault();
         console.log("time",e.target.value);
         setTime( [...time, "00:00"] )
     }
@@ -52,11 +61,11 @@ function Medication() {
         <br></br>
         {
             addMedicationForm? 
-        <Form>
+        <Form >
                 <Form.Group controlId="exampleForm.ControlInput1">
                     <Form.Label><h4>Medication Name:</h4></Form.Label>
-                    <Form.Control type="email" placeholder="name@example.com" 
-                    value={name} onChange = { (e) => setName(e.target.value) } />
+                    <Form.Control type="text" placeholder="add med name" 
+                    value=  {name} onChange = { (e) => setName(e.target.value) } />
                     
                 </Form.Group>
                 
@@ -102,7 +111,7 @@ function Medication() {
                     <Form.Label><h4>Description:</h4></Form.Label>
                     <Form.Control as="textarea" rows={3} />
                 </Form.Group>
-                <Button variant='outline-success'>Submit</Button>
+                <Button variant='outline-success' onClick={addMed}>Submit</Button>
             </Form> : ""
 
         }
