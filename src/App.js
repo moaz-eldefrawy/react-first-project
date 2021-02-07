@@ -1,4 +1,5 @@
 import './App.css';
+import Summary from './components/Summary';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import { Container } from "react-bootstrap";
@@ -48,6 +49,7 @@ db.collection("users").get().then((querySnapshot) => {
 function App() {
   
   return (
+  
     <AuthProvider>
 
         <div>
@@ -57,6 +59,7 @@ function App() {
               <Route exact path="/login" component={LogIn} />
               <Route exact path="/notif" component={Notifications} />
               <Route path="/home" component={HomePage} />
+              <Route path="/summary" component={Summary} />
               <Route component={LogIn} />
             </Switch>
           </Router>
