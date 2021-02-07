@@ -9,6 +9,7 @@ import PrivateRoute from './components/PrivateRoute';
 import HomePage from './components/HomePage';
 import firebase from 'firebase'
 import Medication from "./Medication"
+import Notifications from './components/Notifications';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDs1BuBmCULnjtlsWrA0uKf-0AtX1ihVY8",
@@ -56,6 +57,7 @@ function App() {
             <Switch>
               <Route exact path="/signup" component={SignUp} />
               <Route exact path="/login" component={LogIn} />
+              <Route exact path="/notif" component={Notifications} />
               <Route path="/home" component={HomePage} />
               <Route path="/summary" component={Summary} />
               <Route component={LogIn} />
